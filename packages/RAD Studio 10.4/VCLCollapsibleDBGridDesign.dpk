@@ -11,6 +11,6 @@ requires
   VCLCollapsibleDBGridRuntime;
 
 contains
-  VCL.CollapsibleDBGrid.Register in '..\src\VCL\VCL.CollapsibleDBGrid.Register.pas';
+  VCL.CollapsibleDBGrid.Register in '..\..\src\VCL\VCL.CollapsibleDBGrid.Register.pas';
 
 end.

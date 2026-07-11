@@ -11,6 +11,6 @@ requires
   FMXCollapsibleDBGridRuntime;
 
 contains
-  FMX.CollapsibleDBGrid.Register in '..\src\FMX\FMX.CollapsibleDBGrid.Register.pas';
+  FMX.CollapsibleDBGrid.Register in '..\..\src\FMX\FMX.CollapsibleDBGrid.Register.pas';
 
 end.

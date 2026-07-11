@@ -32,6 +32,6 @@ requires
   CommonCollapsibleDBGridRuntime;
 
 contains
-  FMX.CollapsibleDBGrid in '..\src\FMX\FMX.CollapsibleDBGrid.pas';
+  FMX.CollapsibleDBGrid in '..\..\src\FMX\FMX.CollapsibleDBGrid.pas';
 
 end.

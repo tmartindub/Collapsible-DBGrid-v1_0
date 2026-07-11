@@ -11,6 +11,6 @@ requires
   CommonCollapsibleDBGridRuntime;
 
 contains
-  VCL.CollapsibleDBGrid in '..\src\VCL\VCL.CollapsibleDBGrid.pas';
+  VCL.CollapsibleDBGrid in '..\..\src\VCL\VCL.CollapsibleDBGrid.pas';
 
 end.

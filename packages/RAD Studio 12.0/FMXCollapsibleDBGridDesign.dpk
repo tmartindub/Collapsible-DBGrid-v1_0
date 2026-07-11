@@ -1,0 +1,16 @@
+package FMXCollapsibleDBGridDesign;
+
+{$DESCRIPTION 'CollapsibleDBGrid FMX design-time package'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  designide,
+  CommonCollapsibleDBGridRuntime,
+  FMXCollapsibleDBGridRuntime;
+
+contains
+  FMX.CollapsibleDBGrid.Register in '..\..\src\FMX\FMX.CollapsibleDBGrid.Register.pas';
+
+end.

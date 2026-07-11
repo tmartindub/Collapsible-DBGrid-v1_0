@@ -1,0 +1,45 @@
+# DPM package spec file
+min dpm client version: 1.0.0
+metadata:
+  id: TMartin.CollapsibleDBGrid
+  version: 1.0.0
+  description: 'Collapsible DBGrid is a reusable Delphi component library for grouped, collapsible, data-aware grids'
+  authors:
+    - Tommy Martin
+  projectUrl: https://github.com/tmartindub/Collapsible-DBGrid-v1_0
+  repositoryUrl: https://github.com/tmartindub/Collapsible-DBGrid-v1_0
+  repositoryCommit: '#HASH#'
+  license: MIT
+  copyright: Tommy Martin
+  tags:
+    - dbgrid
+    - grid
+  readme: README.md
+variables:
+  packagesource: RAD Studio $compilerNoPrefix$
+targetPlatforms:
+  - compiler from: delphi10.4
+    compiler to: delphi13.0
+    platforms:
+      - win32
+      - win64
+templates:
+  - name: default
+    source:
+      - src: ./LICENSE
+      - src: ./src/**.pas
+      - src: ./Packages/$packageSource$/*.dpk
+      - src: ./Packages/$packageSource$/*.dproj
+    build:
+      - project: ./Packages/$packageSource$/CommonCollapsibleDBGridRuntime.dproj
+      - project: ./Packages/$packageSource$/VCLCollapsibleDBGridRuntime.dproj
+      - project: ./Packages/$packageSource$/FMXCollapsibleDBGridRuntime.dproj
+    design:
+      - project: ./Packages/$packageSource$/FMXCollapsibleDBGridDesign.dproj
+        platforms:
+          - win32
+          - win64
+      - project: ./Packages/$packageSource$/VCLCollapsibleDBGridDesign.dproj
+        platforms:
+          - win32
+          - win64

@@ -1,0 +1,15 @@
+package CommonCollapsibleDBGridRuntime;
+
+{$DESCRIPTION 'CollapsibleDBGrid common runtime package'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl;
+
+contains
+  CollapsibleDBGrid.Core in '..\..\src\Common\CollapsibleDBGrid.Core.pas',
+  CollapsibleDBGrid.Data in '..\..\src\Common\CollapsibleDBGrid.Data.pas';
+
+end.

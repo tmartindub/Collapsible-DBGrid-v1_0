@@ -1,0 +1,16 @@
+package VCLCollapsibleDBGridDesign;
+
+{$DESCRIPTION 'CollapsibleDBGrid VCL design-time package'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  designide,
+  CommonCollapsibleDBGridRuntime,
+  VCLCollapsibleDBGridRuntime;
+
+contains
+  VCL.CollapsibleDBGrid.Register in '..\..\src\VCL\VCL.CollapsibleDBGrid.Register.pas';
+
+end.

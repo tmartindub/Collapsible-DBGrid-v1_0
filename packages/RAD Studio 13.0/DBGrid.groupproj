@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{316EEF4E-65BA-4BBD-8A94-957F6FB16995}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CommonCollapsibleDBGridRuntime.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCLCollapsibleDBGridRuntime.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCLCollapsibleDBGridDesign.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FMXCollapsibleDBGridRuntime.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FMXCollapsibleDBGridDesign.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CommonCollapsibleDBGridRuntime">
+        <MSBuild Projects="CommonCollapsibleDBGridRuntime.dproj"/>
+    </Target>
+    <Target Name="CommonCollapsibleDBGridRuntime:Clean">
+        <MSBuild Projects="CommonCollapsibleDBGridRuntime.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CommonCollapsibleDBGridRuntime:Make">
+        <MSBuild Projects="CommonCollapsibleDBGridRuntime.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCLCollapsibleDBGridRuntime">
+        <MSBuild Projects="VCLCollapsibleDBGridRuntime.dproj"/>
+    </Target>
+    <Target Name="VCLCollapsibleDBGridRuntime:Clean">
+        <MSBuild Projects="VCLCollapsibleDBGridRuntime.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLCollapsibleDBGridRuntime:Make">
+        <MSBuild Projects="VCLCollapsibleDBGridRuntime.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCLCollapsibleDBGridDesign">
+        <MSBuild Projects="VCLCollapsibleDBGridDesign.dproj"/>
+    </Target>
+    <Target Name="VCLCollapsibleDBGridDesign:Clean">
+        <MSBuild Projects="VCLCollapsibleDBGridDesign.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLCollapsibleDBGridDesign:Make">
+        <MSBuild Projects="VCLCollapsibleDBGridDesign.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXCollapsibleDBGridRuntime">
+        <MSBuild Projects="FMXCollapsibleDBGridRuntime.dproj"/>
+    </Target>
+    <Target Name="FMXCollapsibleDBGridRuntime:Clean">
+        <MSBuild Projects="FMXCollapsibleDBGridRuntime.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXCollapsibleDBGridRuntime:Make">
+        <MSBuild Projects="FMXCollapsibleDBGridRuntime.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXCollapsibleDBGridDesign">
+        <MSBuild Projects="FMXCollapsibleDBGridDesign.dproj"/>
+    </Target>
+    <Target Name="FMXCollapsibleDBGridDesign:Clean">
+        <MSBuild Projects="FMXCollapsibleDBGridDesign.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXCollapsibleDBGridDesign:Make">
+        <MSBuild Projects="FMXCollapsibleDBGridDesign.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CommonCollapsibleDBGridRuntime;VCLCollapsibleDBGridRuntime;VCLCollapsibleDBGridDesign;FMXCollapsibleDBGridRuntime;FMXCollapsibleDBGridDesign"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CommonCollapsibleDBGridRuntime:Clean;VCLCollapsibleDBGridRuntime:Clean;VCLCollapsibleDBGridDesign:Clean;FMXCollapsibleDBGridRuntime:Clean;FMXCollapsibleDBGridDesign:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CommonCollapsibleDBGridRuntime:Make;VCLCollapsibleDBGridRuntime:Make;VCLCollapsibleDBGridDesign:Make;FMXCollapsibleDBGridRuntime:Make;FMXCollapsibleDBGridDesign:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

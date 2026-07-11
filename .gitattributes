@@ -36,3 +36,6 @@
 *.db binary
 *.sqlite binary
 *.sqlite3 binary
+
+# ensures correct commit hash in .dspec file
+*.dspec filter=insert-hash

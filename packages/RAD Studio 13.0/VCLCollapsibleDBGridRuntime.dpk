@@ -1,0 +1,16 @@
+package VCLCollapsibleDBGridRuntime;
+
+{$DESCRIPTION 'CollapsibleDBGrid VCL runtime package'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  vcl,
+  CommonCollapsibleDBGridRuntime;
+
+contains
+  VCL.CollapsibleDBGrid in '..\..\src\VCL\VCL.CollapsibleDBGrid.pas';
+
+end.
